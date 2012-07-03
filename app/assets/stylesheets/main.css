@@ -63,8 +63,9 @@ body{
 /* Header */
 
 header{
-	height: 80px;
+	height: 40px;
 	padding: 40px;
+	border-bottom: 3px solid black;
 }
 
 header h1{
@@ -102,6 +103,22 @@ header ul li{
 
  header nav a:active{
  	color: black;
+ }
+
+ /* Article */
+
+ article{
+ 	width: 850px;
+ }
+
+ article .date{
+ 	background: #00A4EB;
+ 	color: white;
+ 	width: 165px;
+ 	height: 25px;
+ 	padding: 10px;
+ 	font-size: 20px;
+ 	text-align: center;
  }
 
 
