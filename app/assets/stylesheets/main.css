@@ -56,7 +56,7 @@ body{
 
 .container{
 	width: 1200px;
-	/*border: 1px solid black;*/
+	position: relative;
 	margin: 20px auto;
 }
 
@@ -126,7 +126,7 @@ aside li{
 	margin-bottom: 8px;
 }
  aside a{
- 	font-size: 20px;
+ 	font-size: 16px;
  }
 
  /* Article */
@@ -160,4 +160,22 @@ article .post{
 
 .post img{
 	margin: 10px 0;
+}
+
+/* Footer */
+
+footer{
+	height: 10px;
+	padding: 20px;
+	border-top: 3px solid black;
+	margin-top: 20px;
+	font-weight: 800;
+}
+
+footer .last_name{
+	color: #00A4EB;
+}
+
+footer .first_letter{
+	font-size: 1.5em;
 }
