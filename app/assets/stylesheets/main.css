@@ -103,12 +103,30 @@ header ul li{
 	float: left;
 	
 }
- header nav a{
- 	color: #00A4EB;
+ header nav a{ 	
 	font-size: 20px;
 	font-weight: 800;
-	margin-left: 20px;
-	text-decoration: none;
+	margin-left: 20px;	
+ }
+
+ /* Aside */
+
+ aside{
+ 	float: right;
+ 	width: 300px;
+ 	height: 300px;
+ }
+
+ aside p{
+ 	font-size: 25px;
+ 	margin-bottom: 10px;
+ }
+
+aside li{
+	margin-bottom: 8px;
+}
+ aside a{
+ 	font-size: 20px;
  }
 
  /* Article */
