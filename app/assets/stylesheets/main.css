@@ -55,7 +55,7 @@ body{
 }
 
 .container{
-	width: 1200px;
+	width: 960px;
 	position: relative;
 	margin: 20px auto;
 }
@@ -87,6 +87,7 @@ header h1{
 	font-weight: 700;
 	font-size: 50px ;
 	line-height: ;
+	
 }
 
 header h1 span{
@@ -162,6 +163,21 @@ article .post{
 	margin: 10px 0;
 }
 
+
+/* Main Section */
+
+.main_section{
+	width: 960px;
+	height: 200px;
+	margin-top: 180px;
+
+}
+
+.main_text{
+	text-align: center;
+	font-size: 70px;
+}
+
 /* Footer */
 
 footer{
@@ -174,8 +190,4 @@ footer{
 
 footer .last_name{
 	color: #00A4EB;
-}
-
-footer .first_letter{
-	font-size: 1.5em;
 }

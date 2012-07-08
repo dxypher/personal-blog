@@ -1,8 +1,8 @@
 class MockupController < ApplicationController
-	def index
-		
+	def index		
 	end
-	def blog
-		
+	def blog		
+	end
+	def contact
 	end
 end
