@@ -1,8 +1,9 @@
 PersonalBlog::Application.routes.draw do
-  root :to => "mockup#index"
-  get "/blog" => "mockup#blog"
+  root :to => "posts#index"
+  resources :posts
+  get "about" => "posts#about", :as => :about
+
   get "/index" => "mockup#index"
-  get "/about" => "mockup#about"
   get "/contact" => "mockup#contact"
 
 end
