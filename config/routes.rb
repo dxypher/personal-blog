@@ -3,7 +3,7 @@ PersonalBlog::Application.routes.draw do
   resources :posts
   get "about" => "posts#about", :as => :about
 
-  get "/index" => "mockup#index"
+  get "/mockup" => "mockup#blog"
   get "/contact" => "mockup#contact"
 
 end

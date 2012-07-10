@@ -1,4 +1,4 @@
-<aside>
+	<aside>
 		<p>Categories</p>
 		<ul>
 			<li><a href="#">Development</a></li>
@@ -11,11 +11,12 @@
 
 	<article>
 		<% @posts.each do |post| %>
-		<p class="date"><%= post.created_at.strftime("%B, %-d %Y") %></p>
+		<p class="date"><%= post.created_at.localtime.strftime("%B, %-d %Y") %></p>
 		<div class="post">
 			<h1><%= post.title %></h1>
 			<img src="assets/sample.jpg">
-			<p><%= post.post.truncate(400) %><a href="#" class="read_more">Read More</a></p>
-		<% end %>	
+			<p><%= post.post.truncate(300) %><%= link_to "read more", post_url(post.id) %></p>
 		</div>
+		<% end %>
 	</article>
+	
