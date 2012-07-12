@@ -1,0 +1,17 @@
+<%= form_for @post do |f| %>
+	<table>
+		<tr>
+			<th><%= f.label :title %></th>
+			<td><%= f.text_field(:title, :size => 100) %></td>
+		</tr>
+		<tr>
+			<th><%= f.label :post %></th>
+			<td><%= f.text_area(:post, :size => "100x50") %></td>
+		</tr>
+		<tr>
+			<th><%= f.label :image %></th>
+			<td><%= f.text_field(:image) %></td>
+		</tr>
+	</table>
+	<%= f.submit %>
+<% end %>
