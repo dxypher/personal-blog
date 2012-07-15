@@ -18,6 +18,7 @@
 			<img src="assets/sample.jpg">
 			<p><%= post.post.truncate(300) %><%= link_to "read more", post_url(post.id) %></p>
 		</div>
+		<hr>
 		<% end %>
 	</article>
 	<%= paginate @posts %>

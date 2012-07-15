@@ -46,18 +46,25 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+/* Logo */
+
+.logo{
+	display: block;
+	float: left;
+}
+
 
 /* Global */
 body{
 
 	font:  13px/20px “Helvetica Neue”, Arial, Helvetica, sans-serif;
-	background-image: url(strange_bullseyes.png);
+	/*background-image: url(strange_bullseyes.png);*/
 }
 
 .container{
 	width: 960px;
 	position: relative;
-	margin: 20px auto;
+	margin: 0px auto;
 }
 
 a {
@@ -97,7 +104,7 @@ header h1 span{
 
 header ul{
 	float: right;
-	margin-top: 10px;
+	margin-top: 25px;
 }
 
 header ul li{
@@ -197,3 +204,6 @@ footer{
 footer .last_name{
 	color: #00A4EB;
 }
+
+
+/**/
