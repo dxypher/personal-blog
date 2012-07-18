@@ -1,7 +1,7 @@
 
 	<ol>
 		<% @posts.each do |post| %>
-			<li><%= post.title %> <%= link_to "edit", edit_post_url(post.id) %> <%= 
+			<li><%= post.title %> | <%= post.created_at.localtime.strftime("%B, %-d %Y") %> <%= link_to "edit", edit_post_url(post.id) %> <%= 
 					link_to "delete", post_url(post), :method => :delete, :confirm => "Are you sure?" %></li>
 		<% end %>
 	</ol>

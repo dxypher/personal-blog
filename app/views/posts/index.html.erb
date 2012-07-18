@@ -1,5 +1,5 @@
 
-	<aside>
+	<!-- <aside>
 		<p>Categories</p>
 		<ul>
 			<li><a href="#">Development</a></li>
@@ -8,17 +8,22 @@
 			<li><a href="#">Resources</a></li>
 			<li><a href="#">Random Thoughts</a></li>
 		</ul>
-	</aside>
+	</aside> -->
 
 	<article>
 		<% @posts.each do |post| %>
 		<p class="date"><%= post.created_at.localtime.strftime("%B, %-d %Y") %></p>
 		<div class="post">
 			<h1><%= post.title %></h1>
-			<img src="assets/sample.jpg">
-			<p><%= post.post.truncate(300) %><%= link_to "read more", post_url(post.id) %></p>
+			<% if post.image.present? %>
+				<%= image_tag "#{post.image}", {:height => 350} %>
+			<% end %>
+			<!-- <img src="assets/sample.jpg"> -->
+			<p><%= post.post.truncate(300) %> <%= link_to "read more", post_url(post.id) %></p>
 		</div>
 		<hr>
+		<br>
+		<br>
 		<% end %>
 	</article>
 	<%= paginate @posts %>

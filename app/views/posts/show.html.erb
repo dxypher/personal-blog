@@ -2,7 +2,9 @@
 	<p class="date"><%= @post.created_at.strftime("%B, %-d %Y") %></p>
 	<div class="post">
 		<h1><%= @post.title %></h1>
-		<img src="assets/sample.jpg">
+		<% if @post.image.present? %>
+			<%= image_tag "#{@post.image}", {:height => 500} %>
+		<% end %>
 		<p><%= @post.post %></p>	
 	</div>
 </article>
