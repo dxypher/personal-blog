@@ -12,9 +12,9 @@
 		<img src="assets/logo_new.png", class="logo">
 		<nav>
 			<ul>
-				<li><%= link_to "About", about_url %></li>
-				<li><a href="https://github.com/dxypher">GitHub</a></li>
 				<li><%= link_to "Blog", root_url %></li>
+				<li><%= link_to "About", about_url %></li>
+				<li><a href="https://github.com/dxypher">GitHub</a></li>				
 				<li><%= link_to "Contact", contact_url %></li>
 			</ul>
 		</nav>
@@ -24,6 +24,12 @@
 
 	<footer>
 		<p>&copy; Nikhil<span class="last_name">Hira</span></p>
+		<% if session[:uid].present? %>
+			<%= link_to "Logout", logout_url %>
+			<%= link_to "Admin Panel", admin_url %>
+		<% else %>
+			<%= link_to "Admin Login", login_url %>
+		<% end %>
 	</footer>
 
 </body>
