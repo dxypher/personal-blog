@@ -1,5 +1,7 @@
 PersonalBlog::Application.routes.draw do
   
+  resources :apps
+
   get "sessions/new", :as => :login
 
   post "sessions/create"
