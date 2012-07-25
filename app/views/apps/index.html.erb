@@ -1,30 +1,43 @@
-<h1>Portfolio</h1>
-
+<div class="portfolio">
+<% @apps.each do |app| %>
+<%= image_tag "#{app.image}", {:height => 250} %>
 <table>
   <tr>
-    <th>Name</th>
-    <th>Url</th>
-    <th>Github url</th>
-    <th>Description</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @apps.each do |app| %>
-  <%= image_tag "#{app.image}", {:height => 350} %>
-  <tr>
+    <th>Name: </th>
     <td><%= app.name %></td>
-    <td><%= link_to app.url, url_with_protocol(app.url), :target => '_blank' %></td>
-    <td><%= link_to "#{app.name} on GitHub", url_with_protocol(app.github_url), :target => '_blank' %></td>
-    <td><%= app.description %></td>    
-    <td><%= link_to 'Show', app %></td>
-    <td><%= link_to 'Edit', edit_app_path(app) %></td>
-    <td><%= link_to 'Destroy', app, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
-<% end %>
-</table>
+  <tr>
+    <th>URL: </th>
+    <td><%= link_to app.url, url_with_protocol(app.url), :target => '_blank' %></td>
+  </tr>
+  <tr>
+    <th>Github: </th>
+    <td><%= link_to "#{app.name} on GitHub", url_with_protocol(app.github_url), :target => '_blank' %></td>
+  </tr>
+  <tr>
+    <th>Description: </th>
+    <td><%= app.description %></td>
+  </tr>
+    <% if session[:uid].present? %>
+        <th></th>
+        <th></th>
+        <th></th>
+    <% end %>
+  </tr>  
+  <tr>    
+    <% if session[:uid].present? %>    
+        <td><%= link_to 'Show', app %></td>
+        <td><%= link_to 'Edit', edit_app_path(app) %></td>
+        <td><%= link_to 'Destroy', app, confirm: 'Are you sure?', method: :delete %></td>
+    <% end %>
+  </tr>
 
+</table>
+<% end %>
+
+</div>
 <br />
 
+<%if session[:uid].present?%>
 <%= link_to 'New App', new_app_path %>
+<%end%>

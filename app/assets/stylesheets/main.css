@@ -55,6 +55,7 @@ table {
 
 
 /* Global */
+
 body{
 
 	font:  13px/20px “Helvetica Neue”, Arial, Helvetica, sans-serif;
@@ -65,6 +66,9 @@ body{
 	width: 960px;
 	position: relative;
 	margin: 0px auto;
+}
+.set_height{
+	min-height: 450px;
 }
 
 a {
@@ -199,6 +203,9 @@ footer{
 	border-top: 3px solid black;
 	margin-top: 20px;
 	font-weight: 800;
+	clear: both;
+	
+
 }
 
 footer p{
@@ -216,4 +223,21 @@ footer .last_name{
 }
 
 
-/**/
+/* Porfolio */
+
+
+.portfolio table{
+	float: right;
+}
+.portfolio img{
+	float: left;
+}
+
+.portfolio th{
+	text-align: left;
+	font-weight: bold;
+}
+.portfolio td{
+	padding-left: 5px;
+	width: 300px;
+}
